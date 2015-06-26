@@ -1,0 +1,3 @@
+[submodule "squaremile-wordpress-theme"]
+	path = squaremile-wordpress-theme
+	url = git@bitbucket.org:jeffcressman/squaremile-wordpress-theme.git

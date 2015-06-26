@@ -14,15 +14,19 @@ Vagrant.configure("2") do |config|
   config.hostsupdater.aliases = %w{www.vagrantpress.dev}
   config.hostsupdater.remove_on_suspend = true
 
+  # forward ssh keys
+  config.ssh.forward_agent = true
+
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "puppet/manifests"
     puppet.module_path = "puppet/modules"
     puppet.manifest_file  = "init.pp"
     puppet.options="--verbose --debug"
   end
-  
+
   # Fix for slow external network connections
   config.vm.provider :virtualbox do |vb|
+    vb.memory = 2048
     vb.customize ['modifyvm', :id, '--natdnshostresolver1', 'on']
     vb.customize ['modifyvm', :id, '--natdnsproxy1', 'on']
   end

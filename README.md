@@ -42,7 +42,9 @@ The procedure for starting up a working WordPress is as follows:
 1. Clone the project.  (There’s only master branch.)
 2. Run `vagrant plugin install vagrant-hostsupdater` from command line
 2. Run the command `vagrant up` from the directory
-3. Open your browser to http://vagrantpress.dev
+3. Run `vagrant ssh`
+3. Run `sudo apt-get install language-pack-en`
+4. Open your browser to http://vagrantpress.dev
 
 ## Working with the environment
 
