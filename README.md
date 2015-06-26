@@ -48,6 +48,16 @@ The procedure for starting up a working WordPress is as follows:
 7. Run `sudo apt-get install language-pack-en`
 8. Open your browser to http://vagrantpress.dev
 
+When you are finihsed using this environment be sure to run
+
+`vagrant suspend`
+
+or else the virtual machine will keep running and use up more battery life than you would probably like.
+
+If you want to completey remove the virtual machine and the WordPress installation (you can rebuild it at any time following the steps above) then run
+
+`vagrant destroy`
+
 ## Working with the environment
 
 To log in to the local Wordpress installation:
