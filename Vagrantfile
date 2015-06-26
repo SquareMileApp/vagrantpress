@@ -17,6 +17,8 @@ Vagrant.configure("2") do |config|
   # forward ssh keys
   config.ssh.forward_agent = true
 
+  config.vm.synced_folder "squaremile-wordpress-theme/", "/home/vagrant/squaremile-wordpress-theme"
+
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "puppet/manifests"
     puppet.module_path = "puppet/modules"
