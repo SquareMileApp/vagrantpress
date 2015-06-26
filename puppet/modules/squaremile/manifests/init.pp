@@ -2,8 +2,6 @@
 
 class squaremile::install {
 
-  git submodule init
-
   exec { 'submodule-init':
     cwd     => '/home/vagrant/',
     command => 'git submodule init',
